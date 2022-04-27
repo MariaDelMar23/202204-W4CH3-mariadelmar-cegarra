@@ -32,5 +32,5 @@
   -renderiza un boton con boton con el texto "delete" conj una accion RECIBIDA
 
 ##Key
--deben renderiza un numeor RECIBIDO
+-deben renderiza un numero o texto RECIBIDO
 -deben invocar una accion RECIBIDA

@@ -2,9 +2,9 @@ import { useContext } from "react";
 import TelefoneContext from "../../context/TelefoneContext";
 
 const Info = () => {
-  const [text] = useContext(TelefoneContext);
+  const [text, isCalling] = useContext(TelefoneContext);
 
-  return <span className="message">{text}</span>;
+  return <span className={isCalling ? "message" : "off"}>{text}</span>;
 };
 
 export default Info;
