@@ -3,10 +3,14 @@ import Keyboard from "./components/Keyboard/Keyboard";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Info />
-      <Keyboard />
-    </>
+      <main className="phone">
+        <div className="keyboard-container">
+          <Keyboard />
+        </div>
+      </main>
+    </div>
   );
 }
 

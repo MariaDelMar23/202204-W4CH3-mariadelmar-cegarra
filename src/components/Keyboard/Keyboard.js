@@ -8,12 +8,12 @@ const Keyboard = () => {
   const [takeNumber, deleteNumber] = useContext(TelefoneContext);
 
   return (
-    <>
+    <ol class="keyboard">
       {numbers.map((number) => (
         <Key numberButton={number} action={takeNumber} />
       ))}
       <Key numberButton={buttonText} action={deleteNumber} />
-    </>
+    </ol>
   );
 };
 
