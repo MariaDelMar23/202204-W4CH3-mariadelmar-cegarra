@@ -1,22 +1,11 @@
-import { useContext } from "react";
-import TelefoneContext from "../../context/TelefoneContext";
+import Action from "../Action/Action"
+import Display from "../Display/Display"
 
 const Actions = () => {
-  const [isCalling] = useContext(TelefoneContext);
-
-  return (
-    isCalling && (
-      <a href="call" className="call">
-        Call
-      </a>
-    )
-  )(
-    !isCalling && (
-      <a href="hang" className="hang active">
-        Hang
-      </a>
-    )
-  );
-};
+  return (<>
+  <Display />
+  <Action />
+  </>)
+}
 
 export default Actions;

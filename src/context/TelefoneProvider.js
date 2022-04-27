@@ -1,14 +1,34 @@
+import { useState } from "react";
 import TelefoneContext from "./TelefoneContext";
 
 const TelefoneProvider = ({ children }) => {
+  const [isCalling, setIsCalling] = useState(false)
+  const [numberFilled, setNumberFilled] = useState(false)
+  const [number, setNumber] = useState([]);
   const textInfo = "Calling...";
 
-  const takeNumber = () => {};
+  const toggleIsCalling = (event) => {
+    setIsCalling(!isCalling)
+  }
 
-  const deleteNumber = () => {};
+  const takeNumber = (numberButton) => {
+    if (number.length <=9){
+      setNumber([...number, numberButton])
+      setNumberFilled(false)
+    }
+    else{
+      setNumber([...number])
+      setNumberFilled(true)
+    }
+    
+  };
+
+  const deleteNumber = () => {
+    setNumber([])
+  };
 
   return (
-    <TelefoneContext.Provider value={[textInfo, takeNumber, deleteNumber]}>
+    <TelefoneContext.Provider value={[isCalling, textInfo, takeNumber, deleteNumber, toggleIsCalling, numberFilled]}>
       {children}
     </TelefoneContext.Provider>
   );
