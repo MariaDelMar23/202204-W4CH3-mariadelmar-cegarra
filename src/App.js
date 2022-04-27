@@ -1,5 +1,7 @@
+import Info from "./components/Info/Info";
+
 function App() {
-  return <p>Telefono</p>;
+  return <Info />;
 }
 
 export default App;
